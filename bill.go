@@ -32,7 +32,7 @@ func (b bill) format() string {
 }
 
 func (b *bill) insertTip(m float64) {
-	b.tip = m
+	(*b).tip = m
 }
 
 func (b *bill) insertItems(name string, price float64){
