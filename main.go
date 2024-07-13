@@ -2,17 +2,15 @@ package main
 
 import "fmt"
 
+func updateValue(n *int) {
+	*n = 10
+}
+
 func main() {
-	menu := map[string]float64{
-		"Soup":    4.99,
-		"Pie":     7.99,
-		"Salad":   3.99,
-		"pudding": 3.55,
-	}
+	number := 5
+	pointer := &number
+	updateValue(pointer)
 
-	fmt.Println(menu, menu["pudding"])
-
-	for k, v := range menu {
-		fmt.Println(k, "-", v)
-	}
+	fmt.Println(number)
+	// fmt.Println("Memory address of number", &number)
 }
