@@ -46,7 +46,7 @@ func promptOptions(b *bill) {
 		opt, _ = getInput(reader, "Choose option \nA - Add Item\nS - Save bill\nT - Tip bill\n>")
 		opt = strings.ToUpper(opt)
 	}
-
+	b.saveBill()
 	fmt.Println("Saved")
 	
 }

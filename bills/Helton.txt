@@ -1,0 +1,7 @@
+Bill for Helton 
+Includes the items: 
+ soda                      5.44$ 
+ pizza                     2.99$ 
+Subtotal:                 8.43$
+Tip:                      3.00$
+Total:                    11.43$
