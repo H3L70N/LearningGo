@@ -2,15 +2,16 @@ package main
 
 import "fmt"
 
-func updateValue(n *int) {
-	*n = 10
-}
-
 func main() {
-	number := 5
-	pointer := &number
-	updateValue(pointer)
+	name := "Helton"
+	items := map[string]float64{
+		"Sandwich": 6.99,
+		"Soda":     3.55,
+	}
+	tip := 0.0
 
-	fmt.Println(number)
-	// fmt.Println("Memory address of number", &number)
+	bill := newBill(name, items, tip)
+
+	fmt.Println(bill)
+
 }
