@@ -9,9 +9,17 @@ func main() {
 		"Soda":     3.55,
 		"Icecream": 2.45,
 	}
-	tip := 0.0
+	tip := 10.0
 
-	bill := newBill(name, items, tip)
+
+
+	bill := newBill(name)
+
+	for k, v := range items {
+		bill.insertItems(k, v)
+	}
+
+	bill.insertTip(tip)
 
 	fmt.Println(bill)
 	fmt.Println(bill.format())
