@@ -2,15 +2,37 @@ package main
 
 import (
 	"fmt"
-	"sort"
+	"math"
 )
 
-func main() {
-	// greeting := "Hello my friends"
-	// fmt.Println(strings.Contains(greeting, "Hello"))
-	// fmt.Println(strings.ReplaceAll(greeting, "Hello", "Hi"))
+func sayGreetings(n string) {
+	fmt.Printf("Hello %v \n", n)
+}
 
-	ages := []int{10, 20, 13, 14, 12, 18, 29, 30, 24, 47}
-	sort.Ints(ages)
-	fmt.Println(ages, sort.SearchInts(ages, 30))
+func sayBye(n string) {
+	fmt.Printf("Goodbye %v \n", n)
+}
+
+func cicleFunction(n []string, f func(string)) {
+	for _, v := range n {
+		f(v)
+	}
+}
+
+func circleArea(r float64) float64{
+	return math.Pi * math.Pow(r, 2)
+}
+
+func main() {
+	nameOne := "Helton"
+	nameTwo := "Alceu"
+	nameThree := "Hidilson"
+
+	names := []string{nameOne, nameTwo, nameThree}
+
+	sayGreetings(nameOne)
+	sayBye(nameTwo)
+	cicleFunction(names, sayGreetings)
+	cicleFunction(names, sayBye)
+	fmt.Printf("%0.2f \n",circleArea(math.Sqrt(10)))
 }
