@@ -1,26 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	var ages [3]int = [3]int{20, 30, 40}
+	// greeting := "Hello my friends"
+	// fmt.Println(strings.Contains(greeting, "Hello"))
+	// fmt.Println(strings.ReplaceAll(greeting, "Hello", "Hi"))
 
-	var names = [4]string{"One", "Two", "Three", "Four"}
-
-	scores := [4]float64{10.4, 234, 5.7, 6.8}
-	scores[3] = 10.25
-
-	var slice = []string{"Slice1", "Slice2", "Slice3"}
-	slice = append(slice, "MoreSlice")
-
-
-	fmt.Println(ages, len(ages))
-	fmt.Println(names, len(names))
-	fmt.Println(scores, len(scores))
-	fmt.Println(slice, len(slice))
-
-	rangeOne := names[1:3]
-
-	fmt.Println(rangeOne)
-
+	ages := []int{10, 20, 13, 14, 12, 18, 29, 30, 24, 47}
+	sort.Ints(ages)
+	fmt.Println(ages, sort.SearchInts(ages, 30))
 }
